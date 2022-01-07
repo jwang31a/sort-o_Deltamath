@@ -31,8 +31,6 @@ public class Sorts {
     int pass = data.size()-1;
     for(int i = 0; i < data.size()-1; i++  ) {
       System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
-
-
       for(int n = 0; n <= pass;n++  ) {
         if ((Integer)data.get(n) > (Integer)data.get(maxPos)){
           maxPos = n;
@@ -80,4 +78,59 @@ public class Sorts {
       }
     }
   }//end insertionSortV
+
+  //========================================================
+  //return methods to help
+  public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input )
+  {
+    ArrayList<Comparable> copy = input;
+    boolean measure = false;
+    int swap = 0;
+    while (measure == false){
+      for (int i = copy.size() - 1; i > 0; i--) {
+        if ((Integer)copy.get(i - 1) > (Integer)copy.get(i)) {
+          Comparable temp = copy.get(i - 1);
+          copy.set(i - 1, copy.get(i));
+          copy.set(i, temp);
+          swap += 1;
+        }
+      }
+      if (swap == 0){
+        measure = true;
+      }
+      swap = 0;
+    }
+    return copy;
+  }
+
+  public static ArrayList<Comparable> selectionSort( ArrayList<Comparable> input )
+  {
+    //declare and initialize empty ArrayList for copying
+    ArrayList<Comparable> data = new ArrayList<Comparable>();
+
+    //copy input ArrayList into working ArrayList
+    for( Comparable o : input )
+      data.add( o );
+
+    //sort working ArrayList
+    selectionSortV( data );
+
+    return data;
+  }//end selectionSort
+
+  public static ArrayList<Comparable> insertionSort( ArrayList<Comparable> input )
+  {
+    //declare and initialize empty ArrayList for copying
+    ArrayList<Comparable> data = new ArrayList<Comparable>();
+
+    //copy input ArrayList into working ArrayList
+    for( Comparable o : input )
+      data.add( o );
+
+    //sort working ArrayList
+    insertionSortV( data );
+
+    //return working ArrayList
+    return data;
+  }//end insertionSort
 }
