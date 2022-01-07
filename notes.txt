@@ -1,0 +1,37 @@
+// Team Deltamath: Kevin Xiao + Mr. Swag, Jun Hong Wang + Bob
+// APCS pd6
+// L04 -- Never Fear, Big O is Here!
+// 2022-01-10m
+
+BUB-QA:
+q0: If a pass requires no swaps, what do you know?
+a0: the array is sorted
+q1: After pass p, what do you know?
+a1: the first p elements of the array are in the right position (assuming iteration from right to left)
+q2: How many passes are necessary to completely sort?
+a2: the length of the array - 1 is the number of passes
+
+SEL-QA:
+q0: How many passes to sort n elements?(  ) {(  ) {
+a0: System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
+    System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
+q1: What do you know after pass p?
+a1: We know that p elements of the array are in the correct spot.
+q2: How do you know if sorted?
+a2: If we swap length-1 times, all the elements are guaranteed to be in the correct position, so it would be swapped.
+q3: What does a pass boil down to?
+a3: It's a search, then a swap.
+    Not sure what else happens other than these 2 things.
+
+INS-QA:
+q0: How many passes to sort n elements?
+a0: The best case scenario would be n passes, but the worst case scenario would be n(n+1)/2.
+q1: What do you know after pass p?
+a1: It's not guaranteed that p elements are sorted, like in the two other sorting algorithms.
+    However, p elements will be in ascending order.
+q2: How will you know when sorted?
+a2: After we iterate through all the elements in the array, comparing and swapping it accordingly.
+q3: What constitues a pass?
+a3: One pass will consist of comparisons and swaps.
+q4: What must you track?
+a4: The partition size, as well as the element that we are moving.
