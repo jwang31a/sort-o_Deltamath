@@ -35,3 +35,18 @@ q3: What constitues a pass?
 a3: One pass will consist of comparisons and swaps.
 q4: What must you track?
 a4: The partition size, as well as the element that we are moving.
+
+DISCO:
+As expected, not all passes are the same.
+Each of the sorting algorithms will perform the same number of passes (give or take), but will perform drastically different numbers of swaps and comparisons.
+
+Big O notation:
+C is a constant, and C * g(x) will the lower bound for the runtime of the method.
+k is the upper bound, or the maximum amount of time the method should take to run.
+
+The number of comparisons and swaps can be very different, since one can go up linearly, while the other can go up quadratically.
+Bubble sort in its worst case seems to be the most inefficient, since comparisons and swaps, the two things that matter with efficiency (in time) will go up quadratically.
+As for insertion sort and selection sort, we can't exactly figure out which one is more efficient.
+QCC:
+We didn't test out the average case for any of the sorting algorithms, so which one would be the best on average?
+As for insertion sort and selection sort, is there a point where one of the algorithms becomes more efficient than the other?
