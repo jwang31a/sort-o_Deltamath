@@ -35,8 +35,8 @@ public class Driver {
     Sorts.insertionSortV(glen);
     ArrayList foo = new ArrayList<Integer>();
     foo.size()= 1000;
-    for (int i = 0; i < 1000; i++){
-      foo.add(foo.size()-i);
+    for (int i = 999; i >= 0; i--){
+      foo.add(i);
     }
     System.out.println("Bubble Sort Worst Case");
     Sorts.bubbleSortV(foo);
