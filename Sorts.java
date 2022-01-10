@@ -66,8 +66,6 @@ public class Sorts {
     for(int in = 0; in < data.size(); in++  ) {
       //partition marks first item in unsorted region
       int partition = in;
-      System.out.println( "\npartition: " + partition + "\tdataset:"); //diag
-      System.out.println( data );
       //traverse sorted region from right to left
       for( int i = in + 1; i > 0; i-- ) {
         // "walk" the current item to where it belongs
@@ -76,7 +74,6 @@ public class Sorts {
           break;
         }
         else if ( (Integer)data.get(i) < (Integer)data.get(i - 1)) {
-          System.out.println( "swap indices "+(i-1)+" & "+i+"..." ); //diag
           Comparable temp = data.get(i);
           data.set(i, data.get(i - 1));
           data.set(i -1, temp);
