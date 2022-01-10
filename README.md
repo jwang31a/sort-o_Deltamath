@@ -45,3 +45,8 @@ For example, a pass in bubble sort will be longer, as it is an iteration through
 However, a pass in insertion sort will be short, consisting of only some comparisons and one swap only.
 
 The best way to find out which sorting algorithm is best is by looking at the number of swaps and comparisons, since passes can give us unreliable information.
+
+## C and k:
+C is a constant, and for all points f(n), it must be less than or equal to C * g(n).
+k
+The dominant power is the only number that is important in big O notation.
