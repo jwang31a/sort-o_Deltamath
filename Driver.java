@@ -23,6 +23,19 @@ public class Driver {
   }
 
   public static void main(String[] args) {
-    
+    ArrayList glen = new ArrayList<Integer>();
+    for (int i = 0; i < 10000; i++){
+      glen.add(i);
+    }
+    Sorts.bubbleSortV(glen);
+    Sorts.selectionSortV(glen);
+    Sorts.insertionSortV(glen);
+    ArrayList foo = new ArrayList<Integer>();
+    for (int i = 0; i < 10000; i++){
+      foo.add(i);
+    }
+    Sorts.bubbleSortV(foo);
+    Sorts.selectionSortV(foo);
+    Sorts.insertionSortV(foo);
   }
 }
