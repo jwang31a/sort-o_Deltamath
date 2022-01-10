@@ -38,7 +38,7 @@ public class Sorts {
     int pass = data.size()-1;
     for(int i = 0; i < data.size()-1; i++  ) {
       for(int n = 0; n <= pass;n++  ) {
-        if ((Integer)data.get(n) > (Integer)data.get(maxPos)){
+        if ((Integer)data.get(n) >= (Integer)data.get(maxPos)){
           maxPos = n;
          hit = true;
         }
