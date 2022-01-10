@@ -34,6 +34,7 @@ public class Driver {
     System.out.println("Insertion Sort Best Case");
     Sorts.insertionSortV(glen);
     ArrayList foo = new ArrayList<Integer>();
+    foo.size()= 1000;
     for (int i = 0; i < 1000; i++){
       foo.add(foo.size()-i);
     }
