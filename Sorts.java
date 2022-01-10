@@ -5,6 +5,8 @@ public class Sorts {
   {
     boolean measure = false;
     int swap = 0;
+    int swaps = 0;
+    int comp = 0;
     while (measure == false){
       for (int i = data.size() - 1; i > 0; i--) {
         if ((Integer)data.get(i - 1) > (Integer)data.get(i)) {
@@ -12,25 +14,29 @@ public class Sorts {
           data.set(i - 1, data.get(i));
           data.set(i, temp);
           swap += 1;
+          swaps += 1;
         }
+        comp += 1;
       }
       if (swap == 0){
         measure = true;
       }
       swap = 0;
     }
-    /* YOUR IMPLEMENTATION HERE */
+     System.out.println("Comparisons made:" + comp);
+     System.out.println("Swaps made:" + swaps);
   }
 
   public static void selectionSortV( ArrayList<Comparable> data )
   {
     //note: this version places greatest value at "rightmost" end
     boolean hit = false;
+    int swaps = 0;
+    int comp = 0;
     //maxPos will point to position of SELECTION (greatest value)
     int maxPos = data.size()-1;
     int pass = data.size()-1;
     for(int i = 0; i < data.size()-1; i++  ) {
-      System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
       for(int n = 0; n <= pass;n++  ) {
         if ((Integer)data.get(n) > (Integer)data.get(maxPos)){
           maxPos = n;
@@ -41,20 +47,22 @@ public class Sorts {
          Comparable temp = data.get(maxPos);
          data.set(maxPos, data.get(pass));
          data.set(pass, temp);
+         swaps += 1;
       }
        pass -= 1;
        hit = false;
-        System.out.println( "maxPos: " + maxPos );//diag
-        System.out.println( data );//diag
        maxPos = pass;
-
-      System.out.println( "after swap: " +  data );//diag
+      comp += 1;
     }
+      System.out.println("Comparisons made:" + comp);
+      System.out.println("Swaps made:" + swaps);
   }
 
   public static void insertionSortV( ArrayList<Comparable> data )
   {
     boolean sorted = false;
+    int comp = 0;
+    int swaps = 0;
     for(int in = 0; in < data.size(); in++  ) {
       //partition marks first item in unsorted region
       int partition = in;
@@ -72,65 +80,14 @@ public class Sorts {
           Comparable temp = data.get(i);
           data.set(i, data.get(i - 1));
           data.set(i -1, temp);
+          swaps += 1;
         }
         else
           break;
       }
+      comp += 1;
     }
-  }//end insertionSortV
-
-  //========================================================
-  //return methods to help
-  public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input )
-  {
-    ArrayList<Comparable> copy = input;
-    boolean measure = false;
-    int swap = 0;
-    while (measure == false){
-      for (int i = copy.size() - 1; i > 0; i--) {
-        if ((Integer)copy.get(i - 1) > (Integer)copy.get(i)) {
-          Comparable temp = copy.get(i - 1);
-          copy.set(i - 1, copy.get(i));
-          copy.set(i, temp);
-          swap += 1;
-        }
-      }
-      if (swap == 0){
-        measure = true;
-      }
-      swap = 0;
-    }
-    return copy;
+      System.out.println("Comparisons made:" + comp);
+      System.out.println("Swaps made:" + swaps);
   }
-
-  public static ArrayList<Comparable> selectionSort( ArrayList<Comparable> input )
-  {
-    //declare and initialize empty ArrayList for copying
-    ArrayList<Comparable> data = new ArrayList<Comparable>();
-
-    //copy input ArrayList into working ArrayList
-    for( Comparable o : input )
-      data.add( o );
-
-    //sort working ArrayList
-    selectionSortV( data );
-
-    return data;
-  }//end selectionSort
-
-  public static ArrayList<Comparable> insertionSort( ArrayList<Comparable> input )
-  {
-    //declare and initialize empty ArrayList for copying
-    ArrayList<Comparable> data = new ArrayList<Comparable>();
-
-    //copy input ArrayList into working ArrayList
-    for( Comparable o : input )
-      data.add( o );
-
-    //sort working ArrayList
-    insertionSortV( data );
-
-    //return working ArrayList
-    return data;
-  }//end insertionSort
 }
