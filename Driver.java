@@ -39,13 +39,13 @@ public class Driver {
     }
     System.out.println("Bubble Sort Worst Case");
     Sorts.bubbleSortV(foo);
-    for (int i = 0; i >1000; i++){
-      foo.set(i,foo.size()-i);
+    for (int i = 0; i <1000; i++){
+      foo.set(i,1000)-i);
     }
     System.out.println("Selection Sort Worst Case");
     Sorts.selectionSortV(foo);
-    for (int i = 0; i >1000; i++){
-      foo.set(i,foo.size()-i);
+    for (int i = 0; i <1000; i++){
+      foo.set(i,1000-i);
     }
     System.out.println("Insertion Sort Worst Case");
     Sorts.insertionSortV(foo);
