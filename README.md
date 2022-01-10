@@ -18,7 +18,7 @@ Insertion sort:
 Insertion sort should be fairly similar to selection sort, due to the similarities in the algorithms, but instead of finding the lowest element in the unsorted partition, it just looks for the next element and places it where it should be in the sorted partition.
 
 The best case would be a sorted AL, which should be O(n), because it won't have to swap, and it has to do fewer comparisons.
-It has to do fewer comparisons because it will just select the next unsorted element, then compare it with the sorted elements, which is more efficient. 
+It has to do fewer comparisons because it will just select the next unsorted element, then compare it with the sorted elements, which is more efficient.
 
 The worst case will be O(n^2) time, but it's still faster than selection sort, because it requires fewer comparisons, which speeds up the algorithm significantly.
 

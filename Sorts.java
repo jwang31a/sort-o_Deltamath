@@ -7,6 +7,7 @@ public class Sorts {
     int swap = 0;
     int swaps = 0;
     int comp = 0;
+    int passes = 0;
     while (measure == false){
       for (int i = data.size() - 1; i > 0; i--) {
         if ((Integer)data.get(i - 1) > (Integer)data.get(i)) {
@@ -22,9 +23,11 @@ public class Sorts {
         measure = true;
       }
       swap = 0;
+      passes += 1;
     }
      System.out.println("Comparisons made:" + comp);
      System.out.println("Swaps made:" + swaps);
+     System.out.println("Passes made:" + passes);
   }
 
   public static void selectionSortV( ArrayList<Comparable> data )
@@ -36,6 +39,7 @@ public class Sorts {
     //maxPos will point to position of SELECTION (greatest value)
     int maxPos = data.size()-1;
     int pass = data.size()-1;
+    int passes = 0;
     for(int i = 0; i < data.size()-1; i++  ) {
       for(int n = 0; n <= pass;n++  ) {
         if ((Integer)data.get(n) >= (Integer)data.get(maxPos)){
@@ -52,10 +56,12 @@ public class Sorts {
        pass -= 1;
        hit = false;
        maxPos = pass;
-      comp += 1;
+       comp += 1;
+       passes += 1;
     }
       System.out.println("Comparisons made:" + comp);
       System.out.println("Swaps made:" + swaps);
+      System.out.println("Passes made:" + passes);
   }
 
   public static void insertionSortV( ArrayList<Comparable> data )
@@ -63,6 +69,7 @@ public class Sorts {
     boolean sorted = false;
     int comp = 0;
     int swaps = 0;
+    int passes = 0;
     for(int in = 0; in < data.size(); in++  ) {
       //partition marks first item in unsorted region
       int partition = in;
@@ -81,8 +88,10 @@ public class Sorts {
         }
         comp += 1;
       }
+      passes += 1;
     }
       System.out.println("Comparisons made:" + comp);
       System.out.println("Swaps made:" + swaps);
+      System.out.println("Passes made:" + passes);
   }
 }

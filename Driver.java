@@ -23,9 +23,21 @@ public class Driver {
   }
 
   public static void main(String[] args) {
+    ArrayList coco = new ArrayList<Integer>();
+    for (int i = 0; i < 10; i++) {
+      coco.add(i);
+    }
+    ArrayList test = new ArrayList<Integer>();
+    for (int i = 0; i < 100; i++) {
+      test.add(i);
+    }
     ArrayList glen = new ArrayList<Integer>();
     for (int i = 0; i < 1000; i++){
       glen.add(i);
+    }
+    ArrayList aaaa = new ArrayList<Integer>();
+    for (int i = 0; i < 10000; i++) {
+      aaaa.add(i);
     }
     System.out.println("Bubble Sort Best Case");
     Sorts.bubbleSortV(glen);
@@ -49,6 +61,6 @@ public class Driver {
     }
     System.out.println("Insertion Sort Worst Case");
     Sorts.insertionSortV(foo);
-    
+
   }
 }
