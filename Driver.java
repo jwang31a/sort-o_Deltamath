@@ -24,18 +24,22 @@ public class Driver {
 
   public static void main(String[] args) {
     ArrayList glen = new ArrayList<Integer>();
-    for (int i = 0; i < 10000; i++){
+    for (int i = 0; i < 1000; i++){
       glen.add(i);
     }
+    System.out.println(glen);
     Sorts.bubbleSortV(glen);
     Sorts.selectionSortV(glen);
     Sorts.insertionSortV(glen);
+    System.out.println(glen);
     ArrayList foo = new ArrayList<Integer>();
-    for (int i = 9999; i >= 0; i--){
+    for (int i = 999; i >= 0; i--){
       foo.add(i);
     }
+    System.out.println(foo);
     Sorts.bubbleSortV(foo);
     Sorts.selectionSortV(foo);
     Sorts.insertionSortV(foo);
+    System.out.println(foo);
   }
 }
