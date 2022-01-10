@@ -79,8 +79,6 @@ public class Sorts {
           data.set(i -1, temp);
           swaps += 1;
         }
-        else
-          break;
         comp += 1;
       }
     }
