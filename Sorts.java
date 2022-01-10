@@ -81,8 +81,8 @@ public class Sorts {
         }
         else
           break;
+        comp += 1;
       }
-      comp += 1;
     }
       System.out.println("Comparisons made:" + comp);
       System.out.println("Swaps made:" + swaps);
