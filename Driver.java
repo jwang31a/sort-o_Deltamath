@@ -31,7 +31,7 @@ public class Driver {
     Sorts.selectionSortV(glen);
     Sorts.insertionSortV(glen);
     ArrayList foo = new ArrayList<Integer>();
-    for (int i = 0; i < 10000; i++){
+    for (int i = 9999; i >= 0; i--){
       foo.add(i);
     }
     Sorts.bubbleSortV(foo);
