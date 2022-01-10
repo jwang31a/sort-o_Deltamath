@@ -27,27 +27,27 @@ public class Driver {
     for (int i = 0; i < 1000; i++){
       glen.add(i);
     }
-    System.out.println("Bubble Sort);
+    System.out.println("Bubble Sort Best Case");
     Sorts.bubbleSortV(glen);
-    System.out.println("Selection Sort);
+    System.out.println("Selection Sort Best Case");
     Sorts.selectionSortV(glen);
-    System.out.println("Insertion Sort);
+    System.out.println("Insertion Sort Best Case");
     Sorts.insertionSortV(glen);
     ArrayList foo = new ArrayList<Integer>();
     for (int i = 0; i < 1000; i++){
       foo.add(foo.size()-i);
     }
-    System.out.println("Bubble Sort);
+    System.out.println("Bubble Sort Worst Case");
     Sorts.bubbleSortV(foo);
     for (int i = 0; i >1000; i++){
       foo.set(i,foo.size()-i);
     }
-    System.out.println("Selection Sort);
+    System.out.println("Selection Sort Worst Case");
     Sorts.selectionSortV(foo);
     for (int i = 0; i >1000; i++){
       foo.set(i,foo.size()-i);
     }
-    System.out.println("Insertion Sort);
+    System.out.println("Insertion Sort Worst Case");
     Sorts.insertionSortV(foo);
     
   }
