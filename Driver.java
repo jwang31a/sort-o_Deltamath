@@ -27,19 +27,28 @@ public class Driver {
     for (int i = 0; i < 1000; i++){
       glen.add(i);
     }
-    System.out.println(glen);
+    System.out.println("Bubble Sort);
     Sorts.bubbleSortV(glen);
+    System.out.println("Selection Sort);
     Sorts.selectionSortV(glen);
+    System.out.println("Insertion Sort);
     Sorts.insertionSortV(glen);
-    System.out.println(glen);
     ArrayList foo = new ArrayList<Integer>();
-    for (int i = 999; i >= 0; i--){
-      foo.add(i);
+    for (int i = 0; i < 1000; i++){
+      foo.add(foo.size()-i);
     }
-    System.out.println(foo);
+    System.out.println("Bubble Sort);
     Sorts.bubbleSortV(foo);
+    for (int i = 0; i >1000; i++){
+      foo.set(i,foo.size()-i);
+    }
+    System.out.println("Selection Sort);
     Sorts.selectionSortV(foo);
+    for (int i = 0; i >1000; i++){
+      foo.set(i,foo.size()-i);
+    }
+    System.out.println("Insertion Sort);
     Sorts.insertionSortV(foo);
-    System.out.println(foo);
+    
   }
 }
