@@ -24,7 +24,8 @@ The best way to find out which sorting algorithm is best is by looking at the nu
 
 ## C and k:
 C is a constant, and for all points f(n), it must be less than or equal to C * g(n).
-k
+C * g(n) is the lower bound, or the lowest amount of time that the program should take to run.
+k is the upper bound of the runtime.
 The dominant power is the only number that is important in big O notation.
 
 ## Best Case Scenario and Time Complexity For Each Sort
@@ -42,7 +43,13 @@ Insertion sort should be fairly similar to selection sort, due to the similariti
 The best case would be a sorted AL, which should be O(n), because it won't have to swap, and it has to do fewer comparisons.
 It has to do fewer comparisons because it will just select the next unsorted element, then compare it with the sorted elements, which is more efficient.
 
-
+Tables:
+| Array Size | Bubble Sort | Selection Sort | Insertion Sort |
+| :-- | :-- | :-- | :-- |
+| 10 |
+| 100 |
+| 1000 |
+| 10000 |
 
 ## Worst Case Scenario and Time Complexity For Each Sort
 Bubble Sort:
