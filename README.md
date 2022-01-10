@@ -1,4 +1,4 @@
-# sort-o_Deltamath ()
+# sort-o_Deltamath (Kevin Xiao + Mr. Swag, Jun Hong Wang + Bob)
 
 ## Initial hypothesis:
 Bubble sort's worst case should be a reversed sorted AL (AL, in descending order).
@@ -43,13 +43,34 @@ Insertion sort should be fairly similar to selection sort, due to the similariti
 The best case would be a sorted AL, which should be O(n), because it won't have to swap, and it has to do fewer comparisons.
 It has to do fewer comparisons because it will just select the next unsorted element, then compare it with the sorted elements, which is more efficient.
 
-Tables:
+## Tables:
+### Comparisons
 | Array Size | Bubble Sort | Selection Sort | Insertion Sort |
 | :-- | :-- | :-- | :-- |
-| 10 |
-| 100 |
-| 1000 |
-| 10000 |
+| 10 | 9 | 9 | 45 |
+| 100 | 99 | 99 | 4950 |
+| 1000 | 999 | 999 | 499500 |
+| 10000 | 9999 | 9999 | 49995000 |
+The number of comparisons for bubble and selection sort are linear, while for insertion sort, it seems to be n^2/2 (resulting in n^2).
+
+### Swaps
+| Array Size | Bubble Sort | Selection Sort | Insertion Sort |
+| :-- | :-- | :-- | :-- |
+| 10 | 0 | 9 | 0 |
+| 100 | 0 | 99 | 0 |
+| 1000 | 0 | 999 | 0 |
+| 10000 | 0 | 9999 | 0 |
+For bubble and insertion, it takes 0 swaps, but for selection sort, it has to swap in place, so the swaps go up linearly.
+
+### Passes
+| Array Size | Bubble Sort | Selection Sort | Insertion Sort |
+| :-- | :-- | :-- | :-- |
+| 10 | 1 | 9 | 10 |
+| 100 | 1 | 99 | 100 |
+| 1000 | 1 | 999 | 1000 |
+| 10000 | 1 | 9999 | 10000 |
+For bubble sort, the number of passes appears to be a constant 1.
+For selection and insertion, the number of passes increases linearly.
 
 ## Worst Case Scenario and Time Complexity For Each Sort
 Bubble Sort:
@@ -63,4 +84,35 @@ Similar to the best case scenario, the worst case would be O(n^2) time, since it
 Insertion Sort:
 Similar to bubble sort, the worst case scenario is a descending order array list.
 The worst case will be O(n^2) time, but it's still faster than selection sort, because it requires fewer comparisons, which speeds up the algorithm significantly.
->>>>>>> c0baa07df6b088132d06e5084fd544c097a1ca31
+
+## Tables:
+For ALs of 10,000, when we ran it, we would run into a heap space error, which is why filled it in with N/A.
+### Comparisons
+| Array Size | Bubble Sort | Selection Sort | Insertion Sort |
+| :-- | :-- | :-- | :-- |
+| 10 | 90 | 9 | 45 |
+| 100 | 9900 | 99 | 4950 |
+| 1000 | 999000 | 999 | 499500 |
+| 10000 | N/A | N/A | N/A |
+The comparisons for bubble and insertion sort seem to go up quadratically, but insertion sort is more efficient because it's n^2/2 instead of just n^2.
+Selection sort goes up linearly here.
+
+### Swaps
+| Array Size | Bubble Sort | Selection Sort | Insertion Sort |
+| :-- | :-- | :-- | :-- |
+| 10 | 45 | 9 | 45 |
+| 100 | 4950 | 99 | 4950 |
+| 1000 | 499500 | 999 | 499500 |
+| 10000 | N/A | N/A | N/A |
+Both bubble sort and insertion sort go up quadratically, at roughly n^2/2.
+Selection sort goes up linearly.
+
+### Passes
+| Array Size | Bubble Sort | Selection Sort | Insertion Sort |
+| :-- | :-- | :-- | :-- |
+| 10 | 10 | 9 | 10 |
+| 100 | 100 | 99 | 100 |
+| 1000 | 1000 | 999 | 1000 |
+| 10000 | N/A | N/A | N/A |
+For all of them, passes go up linearly, as we expected.
+This information isn't the most useful, because the amount of work done in a pass will be different for each sorting algorithm. 
